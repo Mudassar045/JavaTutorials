@@ -1,9 +1,12 @@
 public class Task1 
 {
-    //checks whether an int is prime or not.
+  static int count = 0;  
+  //checks whether an int is prime or not.
 static boolean isPrime(int n)
  {
-    for(int i=2;2*i<n;i++) {
+    
+    for(int i=2;i*i<=n;i++) {
+	count++;
         if(n%i==0)
             return false;
     }
@@ -20,5 +23,6 @@ static boolean isPrime(int n)
             counter++;
           }
       }
+    System.out.println("count: "+count);
     }
 }
